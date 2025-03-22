@@ -1,0 +1,22 @@
+<%- include('../public/head.ejs') %> <!-- Corrected include syntax -->
+<link rel="stylesheet" href="../public/css/styles.css">
+    
+<body>
+
+    <h1>Categories</h1>
+
+    <ul>
+        <% Object.values(insertData).forEach(category => { %>
+            <li>
+                <strong>Name:</strong> <%= category.name %> <br>
+                <strong>Followers:</strong> <%= category.followers %> <br>
+                <strong>Following:</strong> <%= category.following %> <br>
+                <strong>Posts:</strong> <%= category.posts.length %> posts
+            </li>
+            <hr>
+        <% }); %>
+    </ul>
+
+</body>
+
+</html>

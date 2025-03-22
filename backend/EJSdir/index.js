@@ -10,6 +10,17 @@ app.set("view engine", "ejs");
 app.get('/', (req, res) => {
     res.render('home'); // No need for .ejs extension
 });
+ 
+app.get('/about',(req,res)=>{
+  
+    let insertData=require('./data.json');
+    console.log("this",insertData);
+    
+
+    res.render('about',{insertData});
+})
+
 app.listen(port, () => {
     console.log(`Listenin dsg on port ${port}`);
 });
+

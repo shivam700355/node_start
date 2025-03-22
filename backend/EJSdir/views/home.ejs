@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page </title>
+    <title>Home page</title>
 </head>
+
 <body>
     <h1>This is a Home page</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates inventore veritatis repellat sint numquam tenetur, ea alias porro officiis vel voluptate, cumque deserunt a asperiores ipsum? Repellendus autem ab architecto.</p>
-    <button>submit</button>
-    
+
+    <% var name="shivammaurya" ; %>
+
+        <h1>
+            <%= name.toUpperCase() %>
+        </h1>
+        <!-- Outputs: SHIVAMMAURYA -->
+
+        <% if (name.length> 5) { %>
+            <p>Name is longer than 5 characters.</p>
+         <% } %>
+
+        <%- "<strong>Unescaped HTML Output</strong>" %>
+                    <!-- Outputs raw HTML -->
+
+      <p>Literal EJS tag: <%= "shivammaurya" .toUpperCase() %>
+                    </p>
+                    <!-- Outputs: SHIVAMMAURYA -->
+
+                    <% var trimmed="   Trimmed text" ; %>
+                        <p>
+                            <%= trimmed.trim() %>
+                        </p>
+                        <!-- Removes surrounding spaces -->
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+                            inventore veritatis repellat sint numquam tenetur, ea alias porro
+                            officiis vel voluptate, cumque deserunt a asperiores ipsum?
+                            Repellendus autem ab architecto.</p>
+                        <button>Submit</button>
+
 </body>
+
 </html>
